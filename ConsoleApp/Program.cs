@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using ConsoleTables;
 
@@ -10,7 +9,7 @@ namespace ConsoleApp
 {
     public class Program
     {
-        public static readonly string ApiKey = "";
+        public static readonly string ApiKey = "Legg inn din API-nøkkel her";
         public static readonly string StationsData = "stations";
         public static readonly string AvailabilityData = "stations/availability";
 
@@ -60,11 +59,9 @@ namespace ConsoleApp
                 using (var client = new HttpClient())
                 {
                     client.BaseAddress = new Uri("https://oslobysykkel.no/api/v1/");
-                    client.DefaultRequestHeaders.Accept.Clear();
                     client.DefaultRequestHeaders.Add("Client-Identifier", ApiKey);
-                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
                     HttpResponseMessage response = await client.GetAsync(apiMethod);
+
                     if (response.IsSuccessStatusCode)
                     {
                         CityBike cityBike = await response.Content.ReadAsAsync<CityBike>();
