@@ -1,5 +1,5 @@
 # Test
-Console-applikasjon som viser en liste over sykkel-stativer/stasjoner, antall ledige sykler og tilgjengelige låser på dem.
+Dette er en Console-applikasjon som viser en liste over sykkel-stativer/stasjoner, antall ledige sykler og tilgjengelige låser på dem.
 Applikasjonen er utviklet i Visual Studio 2017. Programmeringsspråket er C#. For å kjøre applikasjonen, så må følgende steg gjennomføres:
 1. Last ned repo'et
 2. Åpne løsningsfilen (ConsoleApp.sln) i Visual Studio (Visual Studio Community kan lastes ned gratis fra https://visualstudio.microsoft.com/vs/community/).
